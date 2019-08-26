@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49b3970b-afc8-4e04-a227-bc2ba1433f2e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/convolution.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/experiments/convolution_using_for_loop.ipynb" afterPath="$PROJECT_DIR$/experiments/convolution_using_for_loop.ipynb" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
