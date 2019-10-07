@@ -130,14 +130,15 @@ class ConvolutionLayer():
             kernel_convolution_store = []
             kernel_channels_final_conv = 0
             for channel_index in range(kernel.shape[0]):
-                filt = kernel[channel_index]
+                filt = kernel[channel_index]  # Accessing the specific channel
                 channel = self.input_matrix[channel_index]
                 convolution_op = Convolution(channel=channel, stride=self.stride, filter_size=self.kernel_height,
                                              filter=filt)
                 convolution_op.convolute(verbose=False)
                 kernel_convolution_store.append(convolution_op)
                 kernel_channels_final_conv += convolution_op.convolve_res_ver  # All channels get added after individual convolution
-            kernel_channels_final_conv = kernel_channels_final_conv + self.bias[bias_index] # add kernel bias to the final channel convolution output
+            kernel_channels_final_conv = kernel_channels_final_conv + self.bias[
+                bias_index]  # add kernel bias to the final channel convolution output
             bias_index += 1  # Note that bias index is same as kernel index, when iterating over kernels
             all_kernel_convolution_store[bias_index] = kernel_convolution_store
             layer_output.append(kernel_channels_final_conv)
